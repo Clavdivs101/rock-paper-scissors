@@ -40,6 +40,7 @@ function getHumanChoice(choice){
     function playRound(humanChoice){
     // let humanChoice = getHumanChoice();
      let computerChoice = getComputerChoice();
+
     if(humanChoice === "paper" && computerChoice === "rock"){
         alert("you won the round paper beats rock");
         humanScore++;
@@ -62,6 +63,9 @@ function getHumanChoice(choice){
             humanChoice === "rock" && computerChoice === "rock" ||
             humanChoice === "scissors" && computerChoice === "scissors")
             alert("The Round is a tie");
+
+            console.log(`You chose: ${humanChoice}`);
+            console.log(`The Computer chose: ${computerChoice}`);
     }
     const humanSelection = getHumanChoice("rock");
     const humanSelectionp = getHumanChoice("paper");
@@ -101,5 +105,5 @@ function getHumanChoice(choice){
 
                                         // testing if these work
 
-    //console.log(getComputerChoice()); 
-    //console.log(getHumanChoice());
+    // console.log(getComputerChoice()); 
+    // console.log(getHumanChoice());
