@@ -27,18 +27,18 @@ const content2 = document.createElement("div");
 content2.classList.add("content2");
 content2.textContent = "Round Outcome:";
 
+
+const content3 = document.createElement("div");
+content3.classList.add("content3");
+// content3.textContent = "Winner";
+
 function getHumanChoice(choice){
     return choice;
     }
 
-
-
-
-
-
-    
     container.appendChild(content);
     container.appendChild(content2);
+    container.appendChild(content3);
     
     function playRound(humanChoice){
      let computerChoice = getComputerChoice();
@@ -72,9 +72,11 @@ function getHumanChoice(choice){
     }else if(humanChoice === computerChoice){
             content2.textContent = `Round Outcome: You chose ${humanChoice}, The Computer also chose ${computerChoice}, The Round is a tie.`;
             console.log("The Round is a tie");
-
-            
-
+    }
+    if (humanScore === 5){
+        content3.textContent = "The Player wins!";
+    }else if(computerScore === 5){
+        content3.textContent = "The Computer wins!";
     }
     }
     const humanSelection = getHumanChoice("rock");
