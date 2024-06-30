@@ -1,4 +1,4 @@
-//function playGame(){
+
 
 function getComputerChoice(max) {
     max = 3;
@@ -14,9 +14,13 @@ function getComputerChoice(max) {
 let humanScore = 0;
 let computerScore = 0;
 
+
 const rockBtn = document.querySelector("#Rockbtn");
 const paperBtn = document.querySelector("#Paperbtn");
 const scissorsBtn = document.querySelector("#Scissorsbtn");
+const restartBtn = document.querySelector("#restart");
+//restartBtn.disabled = true;
+
 
 const container = document.querySelector("#container");
 const content = document.createElement("div");
@@ -39,6 +43,8 @@ function getHumanChoice(choice){
     container.appendChild(content);
     container.appendChild(content2);
     container.appendChild(content3);
+
+//function playGame(){
     
     function playRound(humanChoice){
      let computerChoice = getComputerChoice();
@@ -75,8 +81,16 @@ function getHumanChoice(choice){
     }
     if (humanScore === 5){
         content3.textContent = "The Player wins!";
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorsBtn.disabled = true;
+        restartBtn.disabled = false;
     }else if(computerScore === 5){
         content3.textContent = "The Computer wins!";
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorsBtn.disabled = true;
+        restartBtn.disabled = false;
     }
     }
     const humanSelection = getHumanChoice("rock");
@@ -104,4 +118,15 @@ function getHumanChoice(choice){
         content.textContent = `Your points: ${humanScore} Computer's points: ${computerScore}`;
     });
 
+//}
 
+
+
+    restartBtn.addEventListener("click", () => {
+        content.textContent = `Your points: ${humanScore = 0} Computer's points: ${computerScore = 0}`;
+        content2.textContent = "Round Outcome:";
+        content3.textContent = "";
+        rockBtn.disabled = false;
+        paperBtn.disabled = false;
+        scissorsBtn.disabled = false;
+    });
