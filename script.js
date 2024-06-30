@@ -19,7 +19,7 @@ const rockBtn = document.querySelector("#Rockbtn");
 const paperBtn = document.querySelector("#Paperbtn");
 const scissorsBtn = document.querySelector("#Scissorsbtn");
 const restartBtn = document.querySelector("#restart");
-//restartBtn.disabled = true;
+restartBtn.disabled = true;
 
 
 const container = document.querySelector("#container");
@@ -129,4 +129,5 @@ function getHumanChoice(choice){
         rockBtn.disabled = false;
         paperBtn.disabled = false;
         scissorsBtn.disabled = false;
+        restartBtn.disabled = true;
     });
