@@ -1,5 +1,3 @@
-
-
 function getComputerChoice(max) {
     max = 3;
     let rn = Math.floor(Math.random() * max);
@@ -34,7 +32,6 @@ content2.textContent = "Round Outcome:";
 
 const content3 = document.createElement("div");
 content3.classList.add("content3");
-// content3.textContent = "Winner";
 
 function getHumanChoice(choice){
     return choice;
@@ -98,7 +95,7 @@ function getHumanChoice(choice){
     const humanSelections = getHumanChoice("scissors");
     const computerSelection = getComputerChoice();
  
-
+//}
 
     rockBtn.addEventListener("click", () => {
         playRound(humanSelection, computerSelection);
@@ -117,9 +114,6 @@ function getHumanChoice(choice){
         console.log(humanScore, computerScore);
         content.textContent = `Your points: ${humanScore} Computer's points: ${computerScore}`;
     });
-
-//}
-
 
 
     restartBtn.addEventListener("click", () => {
